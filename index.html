@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Cake Shop in Howrah | Custom Cakes & Desserts | Da Cake Town</title>
+    <meta name="description" content="Da Cake Town: The best cake shop in Howrah. Handmade pastries, custom birthday cakes, and premium desserts near Shibpur Zudio and Howrah Station. Order online!">
+    <meta name="keywords" content="Best cake shop in Howrah, Cake shop near me, Custom cakes in Shibpur, Handmade pastries near Howrah Station, Birthday cakes Howrah, Da Cake Town, Custom Cake in Howrah">
+    
+    <!-- Local SEO Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Da Cake Town",
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
+      "url": "https://dacaketown.com",
+      "telephone": "+918692921044",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "140/1, Grand Trunk Rd, Opposite of Shibpur Zudio",
+        "addressLocality": "Howrah",
+        "addressRegion": "West Bengal",
+        "postalCode": "711101",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.5847064,
+        "longitude": 88.334606
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "10:30",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://www.instagram.com/dacaketown03"
+      ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- CDNs -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="upiPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); text-align:center;">
+
+<div style="background:white; padding:30px; margin:10% auto; width:300px; border-radius:10px;">
+
+<h3>Scan & Pay</h3>
+
+<img src="upi-qr.png" width="200">
+
+</div>
+</div>
+<body class="bg-[#FFF9F0] text-[#3D2B1F] font-['Lato'] overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#FFF9F0]/90 backdrop-blur-md border-b border-[#F4C2C2]/30 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-['Playfair_Display'] font-bold text-[#3D2B1F]">Da Cake Town</div>
+        <div class="hidden md:flex space-x-8 font-['Montserrat'] font-medium text-sm tracking-wide text-nowrap">
+            <a href="#hero" class="hover:text-[#C68E17] transition-colors">Home</a>
+            <a href="#menu" class="hover:text-[#C68E17] transition-colors">Menu</a>
+            <a href="#custom" class="hover:text-[#C68E17] transition-colors">Custom Cakes</a>
+            <a href="#gallery" class="hover:text-[#C68E17] transition-colors">Gallery</a>
+            <a href="#visit" class="hover:text-[#C68E17] transition-colors">Visit</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button id="cart-btn" class="relative p-2 hover:bg-[#F4C2C2]/20 rounded-full transition-all">
+                <i data-lucide="shopping-basket" class="w-6 h-6"></i>
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-[#C68E17] text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-md">0</span>
+            </button>
+            <a href="tel:08692921044" class="hidden sm:block btn-liquid-caramel text-white px-6 py-2 rounded-full font-['Montserrat'] font-semibold text-sm shadow-md">Call Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden bg-[#3D2B1F]">
+        <canvas id="hero-canvas" class="absolute inset-0 z-10 pointer-events-none opacity-40"></canvas>
+        
+        <!-- Chocolate Drip Overlay -->
+        <div class="absolute inset-0 z-10 pointer-events-none mix-blend-multiply opacity-60">
+            <img src="assets/634ecd39ae848a32_elegant_chocolate_drip_architecture_index_0.jpeg" alt="Chocolate Drip Decoration" class="w-full h-full object-cover">
+        </div>
+
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c825a1?auto=format&fit=crop&q=80&w=2000" alt="Premium Designer Cake" class="w-full h-full object-cover brightness-[0.4]">
+        </div>
+
+        <div class="relative z-20 text-center text-white px-4 max-w-4xl">
+            <h1 class="font-['Playfair_Display'] text-5xl md:text-8xl mb-6 opacity-0 translate-y-10 hero-title text-[#FFFDD0] drop-shadow-lg">Handmade with love!</h1>
+            <p class="font-['Playfair_Display'] italic text-xl md:text-3xl mb-12 opacity-0 translate-y-10 hero-subtitle text-[#FFFDD0]/90 tracking-wide text-shadow-soft">Where every slice tells a sweet story.</p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center opacity-0 translate-y-10 hero-btns">
+                <a href="#menu" class="btn-liquid-blush text-[#3D2B1F] px-10 py-4 rounded-full font-bold text-lg w-full sm:w-auto shadow-2xl scale-hover">Order Now</a>
+                <a href="#custom" class="btn-liquid-white text-white px-10 py-4 rounded-full font-bold text-lg w-full sm:w-auto shadow-xl scale-hover">Customize Cake</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-20">
+            <i data-lucide="chevron-down" class="text-white w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-24 px-6 md:px-20 bg-[#FFF9F0] relative overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="flex-1">
+                <h2 class="font-['Playfair_Display'] text-5xl text-[#3D2B1F] mb-6">Born from Passion & Flour</h2>
+                <p class="font-['Lato'] text-lg text-[#3D2B1F]/80 leading-relaxed mb-8">
+                    Born from a passion for authentic flavors and local charm, Da Cake Town isn't just a bakery—it’s a Howrah landmark. Every cake is handmade using farm-fresh ingredients, skipping the preservatives to ensure every bite feels like home.
+                </p>
+                <p class="font-['Lato'] text-lg text-[#3D2B1F]/80 leading-relaxed">
+                    Whether it's a nostalgic classic or a bespoke masterpiece for your special day, we bake your celebrations to life with precision and love.
+                </p>
+            </div>
+            <div class="flex-1 relative">
+                <div class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl transform rotate-2">
+                    <img loading="lazy" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&q=80&w=800" alt="Artisan Baker Creating Pastries" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-6 -right-6 w-full h-full border-4 border-[#F4C2C2] rounded-[40px] -z-0"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-24 px-6 md:px-20 bg-white">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="font-['Playfair_Display'] text-5xl text-[#3D2B1F] mb-4">Our Sweet Collections</h2>
+            <div class="w-24 h-1 bg-[#C68E17] mx-auto mb-12"></div>
+            <div class="flex flex-wrap justify-center gap-4 mb-12" id="menu-tabs">
+                <button class="tab-btn active" data-category="cakes">Signature Cakes</button>
+                <button class="tab-btn" data-category="pastries">Pastries</button>
+                <button class="tab-btn" data-category="doughnuts">Doughnuts</button>
+                <button class="tab-btn" data-category="custom">Party Bundles</button>
+            </div>
+            <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+        </div>
+    </section>
+
+    <!-- Custom Cake Multi-Step Form -->
+    <section id="custom" class="py-24 px-6 md:px-20 bg-[#F4C2C2]/10">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-16 rounded-[48px] shadow-2xl border border-[#F4C2C2]/20">
+            <div class="text-center mb-12">
+                <h2 class="font-['Playfair_Display'] text-5xl text-[#3D2B1F] mb-6">Design Your Masterpiece</h2>
+                <div class="flex justify-center gap-3 mb-4" id="form-steps-indicator">
+                    <div class="w-12 h-2 rounded-full bg-[#C68E17] step-dot active"></div>
+                    <div class="w-12 h-2 rounded-full bg-gray-200 step-dot"></div>
+                    <div class="w-12 h-2 rounded-full bg-gray-200 step-dot"></div>
+                </div>
+            </div>
+            <form id="custom-cake-form" class="relative overflow-hidden min-h-[450px]">
+                <div class="form-step active" data-step="1">
+                    <h3 class="text-2xl font-['Playfair_Display'] mb-8 text-[#3D2B1F]">Step 1: Choose Your Canvas</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <label class="block text-sm font-bold mb-3 text-[#C68E17] uppercase tracking-widest">Flavor</label>
+                            <select name="flavor" class="modern-input w-full p-5 rounded-2xl border border-[#F4C2C2]/40 outline-none">
+                                <option>Belgian Chocolate</option>
+                                <option>Red Velvet</option>
+                                <option>Vanilla Dream</option>
+                                <option>Zesty Lemon</option>
+                                <option>Fresh Fruit</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-3 text-[#C68E17] uppercase tracking-widest">Size (Weight)</label>
+                            <select name="size" class="modern-input w-full p-5 rounded-2xl border border-[#F4C2C2]/40 outline-none">
+                                <option value="0.5">0.5 Kg</option>
+                                <option value="1.0">1.0 Kg</option>
+                                <option value="2.0">2.0 Kg</option>
+                                <option value="3.0">3.0+ Kg (Custom)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <label class="block text-sm font-bold mb-4 text-[#C68E17] uppercase tracking-widest">Frosting Type</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <label class="custom-radio">
+                                <input type="radio" name="frosting" value="Buttercream" checked>
+                                <span class="radio-content">Buttercream</span>
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="frosting" value="Whipped Cream">
+                                <span class="radio-content">Whipped</span>
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="frosting" value="Ganache">
+                                <span class="radio-content">Ganache</span>
+                            </label>
+                            <label class="custom-radio">
+                                <input type="radio" name="frosting" value="Fondant">
+                                <span class="radio-content">Fondant</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="button" onclick="nextStep(2)" class="w-full mt-12 btn-liquid-caramel text-white p-5 rounded-2xl font-bold shadow-xl">Continue to Personalization</button>
+                </div>
+                
+                <div class="form-step hidden" data-step="2">
+                    <h3 class="text-2xl font-['Playfair_Display'] mb-8 text-[#3D2B1F]">Step 2: Add Your Touch</h3>
+                    <div class="space-y-8">
+                        <div>
+                            <label class="block text-sm font-bold mb-3 text-[#C68E17] uppercase tracking-widest">Message on Cake</label>
+                            <input type="text" name="message" placeholder="Happy Birthday..." class="modern-input w-full p-5 rounded-2xl border border-[#F4C2C2]/40 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-3 text-[#C68E17] uppercase tracking-widest">Reference Image</label>
+                            <div class="border-2 border-dashed border-[#F4C2C2] p-10 rounded-2xl text-center bg-[#FFF9F0]/50">
+                                <i data-lucide="upload-cloud" class="mx-auto mb-4 text-[#C68E17]"></i>
+                                <p class="text-sm text-gray-500 mb-4">Upload a reference or sketch</p>
+                                <input type="file" name="ref_image" class="mx-auto text-sm">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-12">
+                        <button type="button" onclick="nextStep(1)" class="flex-1 border-2 border-[#3D2B1F] p-5 rounded-2xl font-bold hover:bg-gray-50 transition-colors">Back</button>
+                        <button type="button" onclick="nextStep(3)" class="flex-1 btn-liquid-caramel text-white p-5 rounded-2xl font-bold shadow-xl">Continue</button>
+                    </div>
+                </div>
+
+                <div class="form-step hidden" data-step="3">
+                    <h3 class="text-2xl font-['Playfair_Display'] mb-8 text-[#3D2B1F]">Step 3: Finishing Touches</h3>
+                    <div class="space-y-8">
+                        <div>
+                            <label class="block text-sm font-bold mb-3 text-[#C68E17] uppercase tracking-widest">Preferred Delivery Date</label>
+                            <input type="date" name="delivery_date" class="modern-input w-full p-5 rounded-2xl border border-[#F4C2C2]/40 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-3 text-[#C68E17] uppercase tracking-widest">WhatsApp Number</label>
+                            <input type="tel" name="phone" placeholder="Your Number" class="modern-input w-full p-5 rounded-2xl border border-[#F4C2C2]/40 outline-none" required>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-12">
+                        <button type="button" onclick="nextStep(2)" class="flex-1 border-2 border-[#3D2B1F] p-5 rounded-2xl font-bold hover:bg-gray-50 transition-colors">Back</button>
+                        <button type="submit" class="flex-1 btn-liquid-caramel text-white p-5 rounded-2xl font-bold shadow-xl">Place Inquiry</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Visit Store Section -->
+    <section id="visit" class="py-24 px-6 md:px-20 bg-white">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <h2 class="font-['Playfair_Display'] text-5xl text-[#3D2B1F]">Visit Our Shop</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-5">
+                        <div class="p-3 bg-[#F4C2C2]/20 rounded-full">
+                            <i data-lucide="map-pin" class="text-[#C68E17] w-6 h-6"></i>
+                        </div>
+                        <p class="text-xl leading-relaxed">Opposite of Shibpur Zudio, 140/1, Grand Trunk Rd, Howrah Railway Station, Shibpur, Howrah, West Bengal 711101</p>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="p-3 bg-[#F4C2C2]/20 rounded-full">
+                            <i data-lucide="clock" class="text-[#C68E17] w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-xl mb-1">Open Every Day</p>
+                            <p class="text-lg text-gray-600">10:30 AM – 12:00 Midnight</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps/dir//Da+cake+Town" target="_blank" class="inline-flex items-center gap-3 btn-liquid-caramel text-white px-10 py-4 rounded-full font-bold shadow-xl transition-all">
+                    <i data-lucide="navigation" class="w-6 h-6"></i>
+                    Get Directions
+                </a>
+            </div>
+            <div class="h-[500px] rounded-[48px] overflow-hidden shadow-2xl border-8 border-white">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.0537330541624!2d88.33203107530026!3d22.58470637948332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02773078e84155%3A0x9fc29fcddc3790a7!2sDa%20cake%20Town!5e0!3m2!1sen!2sin!4v1712392721234!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#3D2B1F] text-white py-20 px-6 md:px-20 pb-32 sm:pb-20">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+            <div class="col-span-1 md:col-span-2">
+                <h3 class="font-['Playfair_Display'] text-4xl mb-6">Da Cake Town</h3>
+                <p class="text-white/60 text-lg max-w-sm mb-8 leading-relaxed italic">"Where every slice tells a sweet story."</p>
+                <div class="flex space-x-5">
+                    <a href="https://www.instagram.com/dacaketown03" target="_blank" class="social-icon">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i data-lucide="facebook" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 font-['Montserrat'] uppercase tracking-widest text-sm text-[#C68E17]">Bakery Details</h4>
+                <ul class="space-y-4 text-white/70">
+                    <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Shibpur, Howrah</li>
+                    <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> 086929 21044</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 font-['Montserrat'] uppercase tracking-widest text-sm text-[#C68E17]">Join Our Club</h4>
+                <div class="flex">
+                    <input type="email" placeholder="Email" class="bg-white/10 border-none rounded-l-2xl p-4 text-sm w-full outline-none focus:ring-1 focus:ring-[#F4C2C2]">
+                    <button class="bg-[#F4C2C2] text-[#3D2B1F] px-6 rounded-r-2xl font-bold hover:bg-[#C68E17] hover:text-white transition-all">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto border-t border-white/10 mt-20 pt-10 text-center text-white/30 text-sm">
+            © 2026 Da Cake Town. Proudly handcrafted in Howrah.
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Footer Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-[#FFF9F0]/95 backdrop-blur-lg border-t border-[#F4C2C2]/30 px-4 py-3 flex gap-3 z-[100] shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
+        <a href="tel:08692921044" class="flex-1 btn-liquid-caramel text-white flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm shadow-lg">
+            <i data-lucide="phone" class="w-4 h-4"></i> Call Now
+        </a>
+        <a href="https://wa.me/918692921044?text=Hi%20I%20want%20to%20order%20a%20cake" target="_blank" class="flex-1 bg-[#25D366] text-white flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm shadow-lg">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Sweet Assist Chatbot -->
+    <div id="chatbot-container" class="fixed bottom-32 sm:bottom-24 right-6 w-80 bg-white rounded-3xl shadow-2xl overflow-hidden z-[60] transform scale-0 origin-bottom-right transition-transform duration-300 border border-gray-100">
+        <div class="bg-[#3D2B1F] p-5 text-white flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse absolute -right-1 -bottom-1 border-2 border-[#3D2B1F]"></div>
+                    <i data-lucide="sparkles" class="w-6 h-6 text-[#F4C2C2]"></i>
+                </div>
+                <span class="font-bold text-base font-['Playfair_Display']">Sweet Assist</span>
+            </div>
+            <button id="close-chat" class="p-1 hover:bg-white/10 rounded-full"><i data-lucide="x" class="w-5 h-5"></i></button>
+        </div>
+        <div id="chat-messages" class="h-72 p-5 overflow-y-auto space-y-4 text-sm bg-gray-50/50">
+            <div class="bg-[#F4C2C2]/30 p-4 rounded-2xl rounded-tl-none border border-[#F4C2C2]/50 text-[#3D2B1F]">
+                Welcome to Da Cake Town! 🍰 How can we sweeten your day?
+            </div>
+        </div>
+        <div class="p-5 border-t bg-white">
+            <div class="grid grid-cols-1 gap-2">
+                <button class="chat-option-btn" data-query="hours">Opening Hours</button>
+                <button class="chat-option-btn" data-query="custom">Custom Cake Process</button>
+                <button class="chat-option-btn" data-query="delivery">Delivery Areas</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- UI Overlays -->
+    <div id="cart-sidebar" class="fixed inset-y-0 right-0 w-full md:w-[450px] bg-white z-[110] shadow-2xl transform translate-x-full transition-transform duration-500">
+         <div class="h-full flex flex-col p-8">
+            <div class="flex justify-between items-center mb-10">
+                <h3 class="text-3xl font-['Playfair_Display'] text-[#3D2B1F]">Your Basket</h3>
+                <button id="close-cart" class="p-3 hover:bg-[#FFF9F0] rounded-full transition-colors"><i data-lucide="x" class="w-8 h-8"></i></button>
+            </div>
+            <div id="cart-items" class="flex-1 overflow-y-auto space-y-6"></div>
+            <div class="border-t pt-8 mt-6">
+                <div class="flex justify-between items-center mb-6">
+                    <span class="text-gray-500 font-medium">Subtotal</span>
+                    <span id="cart-total" class="font-bold text-2xl text-[#C68E17]">₹0.00</span>
+                </div>
+                <button onclick="orderCake()" class="checkout-btn">Proceed to Checkout</button>
+
+<button onclick="showUPI()" class="checkout-btn">Pay with UPI</button>
+                <p class="text-center text-xs text-gray-400 mt-4">Safe & Secure Payment Options Available</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Actions -->
+    <div class="fixed bottom-24 right-6 hidden sm:flex flex-col gap-4 z-50">
+        <button id="chat-toggle" class="bg-[#3D2B1F] text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-all hover:rotate-12">
+            <i data-lucide="message-square" class="w-7 h-7"></i>
+        </button>
+        <a href="https://wa.me/918692921044?text=Hi,%20i%20want%20to%20order%20a%20cake" target="_blank" class="bg-[#25D366] text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-all">
+            <i data-lucide="message-circle" class="w-7 h-7"></i>
+        </a>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

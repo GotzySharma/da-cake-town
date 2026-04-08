@@ -1,0 +1,203 @@
+:root {
+    --creme: #FFF9F0;
+    --blush: #F4C2C2;
+    --cacao: #3D2B1F;
+    --caramel: #C68E17;
+    --cream-high: #FFFDD0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    color: var(--cacao);
+}
+
+/* Liquid Hover Effects & Custom Gradients */
+.btn-liquid-blush {
+    background: var(--blush);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-liquid-blush:hover {
+    background: var(--caramel);
+    transform: translateY(-4px) scale(1.02);
+    color: white !important;
+}
+
+.btn-liquid-caramel {
+    background: linear-gradient(135deg, #C68E17 0%, #a07412 100%);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-liquid-caramel:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(198, 142, 23, 0.3);
+}
+
+.btn-liquid-white {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+}
+
+.btn-liquid-white:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.text-shadow-soft {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Tabs Styling */
+.tab-btn {
+    padding: 0.85rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+    color: var(--cacao);
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.tab-btn.active {
+    background-color: var(--cacao);
+    color: white;
+    box-shadow: 0 10px 20px rgba(61, 43, 31, 0.2);
+}
+
+/* Product Cards */
+.product-card {
+    background: white;
+    border-radius: 32px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(244, 194, 194, 0.2);
+}
+
+.product-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(61, 43, 31, 0.12);
+}
+
+/* Form Styling Enhancements */
+.modern-input {
+    background: var(--creme);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.modern-input:focus {
+    background: white;
+    border-color: var(--caramel);
+    box-shadow: 0 0 0 4px rgba(198, 142, 23, 0.1);
+}
+
+.custom-radio input {
+    display: none;
+}
+
+.custom-radio .radio-content {
+    display: block;
+    padding: 1rem;
+    border: 2px solid #f3f4f6;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.custom-radio input:checked + .radio-content {
+    background: var(--blush);
+    border-color: var(--blush);
+    color: var(--cacao);
+    transform: scale(1.05);
+}
+
+/* Chatbot Styles */
+.chat-option-btn {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1.25rem;
+    background: #f9fafb;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 1px solid #eee;
+}
+
+.chat-option-btn:hover {
+    background: white;
+    border-color: var(--blush);
+    color: var(--caramel);
+    transform: translateX(5px);
+}
+
+/* Social Icons */
+.social-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    background: var(--blush);
+    color: var(--cacao);
+    transform: translateY(-5px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--creme); }
+::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--blush); }
+
+/* Animation Classes */
+.scale-hover {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scale-hover:hover {
+    transform: scale(1.05);
+}
+
+.step-dot.active {
+    width: 3rem;
+    background-color: var(--caramel);
+}
+
+@media (max-width: 640px) {
+    .hero-title { font-size: 3.5rem; }
+    .hero-subtitle { font-size: 1.25rem; }
+}
+
+.checkout-btn{
+display:block;
+width:100%;
+background:#e11d48;
+color:white;
+padding:12px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+}

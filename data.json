@@ -1,0 +1,69 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Belgian Truffle Dream",
+      "category": "cakes",
+      "price": 650,
+      "description": "Dense chocolate layers filled with premium Belgian ganache.",
+      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 2,
+      "name": "Red Velvet Romance",
+      "category": "cakes",
+      "price": 650,
+      "description": "Velvety layers with our signature cream cheese frosting.",
+      "image": "https://images.unsplash.com/photo-1586788680434-30d324671ff6?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 3,
+      "name": "Zesty Lemon Curd",
+      "category": "cakes",
+      "price": 750,
+      "description": "Tangy lemon sponge topped with fresh citrus glaze.",
+      "image": "https://images.unsplash.com/photo-1519340333755-507213437341?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 4,
+      "name": "Blueberry Cheesecake Slice",
+      "category": "pastries",
+      "price": 180,
+      "description": "New York style cheesecake with fresh mountain blueberries.",
+      "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 5,
+      "name": "Caramel Glazed Doughnut",
+      "category": "doughnuts",
+      "price": 95,
+      "description": "Soft fluffy dough with a rich salted caramel dip.",
+      "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=600"
+    },
+    {
+      "id": 6,
+      "name": "Celebration Bundle",
+      "category": "custom",
+      "price": 1500,
+      "description": "1kg Cake + 6 Cupcakes + Set of Balloons.",
+      "image": "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?auto=format&fit=crop&q=80&w=600"
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Anjali R.",
+      "stars": 5,
+      "text": "The best Belgian Truffle I've ever had in Howrah! Delivery was right on time."
+    },
+    {
+      "name": "Vikram Singh",
+      "stars": 5,
+      "text": "Ordered a custom cake for my daughter's birthday. It looked better than the photo I sent!"
+    },
+    {
+      "name": "Priya D.",
+      "stars": 4,
+      "text": "Their doughnuts are so fresh. Love the salted caramel one specifically."
+    }
+  ]
+}
