@@ -8,8 +8,7 @@ The website allows customers to browse cakes, add items to cart, and place order
 ## 🌐 Live Website
 (After hosting you will add the link here)
 
-Example:
-https://dacaketown.netlify.app
+https://da-cake-town.netlify.app/
 
 ---
 
